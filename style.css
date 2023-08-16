@@ -64,17 +64,8 @@ variables are available to be used anywhere in our html document
     background-color: var(--color3);
     padding: 0.5em;
     border-radius: 1em;
-    
 }
 
-.our-clients-title {
-    /* TODO: style the 'Our Clients' text font */
-}
-
-/* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
-.client-icon {
-    width: 100%;
-}
 
 /* now we create names for the grid areas for specific elements */
 #banner {
