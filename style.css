@@ -47,24 +47,23 @@ variables are available to be used anywhere in our html document
         /* TODO: style the card as a column based flexbox with rounded corners */
     display: flex; 
     flex-direction: column;
+    border-radius: 1em;
+    height: 100%;
     overflow: hidden;
 }
 
 /* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
 .topic-card-image {
-    width: 50%;
-    border-radius: 100%;
-    padding-bottom: 2em;
-    padding-left: 2em;
-    
+    width: 100%;
+    object-fit: cover;
 }
 
 .topic-card-blurb {
     /* TODO: style the blurb with padding */
     background-color: var(--color3);
     padding: 0.5em;
-    border-radius: 1em;
-    }
+    height: 100%;
+}
 
 
 /* now we create names for the grid areas for specific elements */
@@ -73,7 +72,7 @@ variables are available to be used anywhere in our html document
     /* TODO: give the grid-area a name */
 }
 
-#topic-card1{
+#topic-card1 {
     /* TODO: give the grid-area a name */
     grid-area: ca1; 
 }
@@ -84,12 +83,12 @@ variables are available to be used anywhere in our html document
 }
 
 #topic-card3 {
-    grid-area: ca4;
+    grid-area: ca3;
     /* TODO: give the grid-area a name */
 }
 
 #topic-card4 {
-    grid-area: ca5;
+    grid-area: ca4;
 }
 
 #topic-card5 {
@@ -99,9 +98,16 @@ variables are available to be used anywhere in our html document
 #topic-card6 {
     grid-area: ca6;
 }
+
 #topic-card7 {
     grid-area: ca7;
 }
+
+#topic-card8 {
+    grid-area: ca8;
+}
+
+
 /* 
 Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
 for the smallest screen sizes. In this case we want a single column that spans the main container.
@@ -110,10 +116,16 @@ media queries for progressively bigger screen widths
 */
 
 .main-container {
+    display: grid;
+    column-gap: 1em;;
+}
+
+
+.main-container {
     /* TODO: setup the grid-template for mobile phone layout */
     grid-template:
     "ban ban ban ban" minmax(6em, auto)
-    ".    .   .  . "  minmax(2em, auto)
+    ".    .   .   . "  minmax(2em, auto)
     "ca1 ca1 ca1 ca1" minmax(30em, auto)
     ".    .   .   . " minmax(2em, auto)
     "ca2 ca2 ca2 ca2" minmax(30em, auto)
@@ -137,6 +149,7 @@ media queries for progressively bigger screen widths
     "ban ban ban ban ban ban ban ban" minmax(8em, auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
     ".    .   ca1 ca1 ca1 ca1 .   . " minmax(30em, auto)
+    ".    .   .   .   .   .   .   . " minmax(2em, auto)
     "ca2 ca2 ca2 ca2 ca3 ca3 ca3 ca3" minmax(30em,auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
     "ca4 ca4 ca4 ca4 ca5 ca5 ca5 ca5" minmax(30em,auto)
@@ -156,11 +169,11 @@ media queries for progressively bigger screen widths
         grid-template:
         "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        ".    .   .   .  ca1 ca1 ca1 ca1 .    .   .   ." minmax(32em, auto)
+        " .    .   .   .  ca1 ca1 ca1 ca1 .    .   .   ." minmax(32em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
         "ca2 ca2 ca2 ca2 ca3 ca3 ca3 ca3 ca4 ca4 ca4 ca4" minmax(32em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "ca5 ca5 ca5 ca5 ca6 ca6 ca6 ca6 ca7 ca7 ca7 ca7" minmax(2em, auto)
+        "ca5 ca5 ca5 ca5 ca6 ca6 ca6 ca6 ca7 ca7 ca7 ca7" minmax(32em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
         " .   .   .   .  ca8 ca8 ca8 ca8  .   .   .   . " minmax(32em, auto)
     
