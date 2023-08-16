@@ -43,28 +43,28 @@ variables are available to be used anywhere in our html document
     /* TODO: banner subtitle font styling */
 }
 
-.team-member-card {
+.topic-card {
         /* TODO: style the card as a column based flexbox with rounded corners */
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;
     overflow: hidden;
 }
 
 /* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
-.team-member-card-image {
-    width: 80%;
+.topic-card-image {
+    width: 50%;
     border-radius: 100%;
     padding-bottom: 2em;
     padding-left: 2em;
     
 }
 
-.team-member-card-blurb {
+.topic-card-blurb {
     /* TODO: style the blurb with padding */
     background-color: var(--color3);
     padding: 0.5em;
     border-radius: 1em;
-}
+    }
 
 
 /* now we create names for the grid areas for specific elements */
@@ -73,95 +73,62 @@ variables are available to be used anywhere in our html document
     /* TODO: give the grid-area a name */
 }
 
-#teamMemberCard1 {
+#topic-card1{
     /* TODO: give the grid-area a name */
-    grid-area: tm1; 
+    grid-area: ca1; 
 }
 
-#teamMemberCard2 {
-    grid-area: tm2;
-    /* TODO: give the grid-area a name */
-}
-
-#teamMemberCard3 {
-    grid-area: tm3;
+#topic-card2 {
+    grid-area: ca2;
     /* TODO: give the grid-area a name */
 }
 
-#ourClientsTitle {
-        /* TODO: give the grid-area a name */
-}
-
-#clientIcon1 {
-    grid-area: ci1;
+#topic-card3 {
+    grid-area: ca4;
     /* TODO: give the grid-area a name */
 }
 
-#clientIcon2 {
-    grid-area: ci2;
-    /* TODO: give the grid-area a name */
+#topic-card4 {
+    grid-area: ca5;
 }
 
-#clientIcon3 {
-    grid-area: ci3;
-    /* TODO: give the grid-area a name */
+#topic-card5 {
+    grid-area: ca5;
 }
 
-#clientIcon4 {
-    grid-area: ci4;
-    /* TODO: give the grid-area a name */
+#topic-card6 {
+    grid-area: ca6;
 }
-
-#clientIcon5 {
-    grid-area: ci5;
-    /* TODO: give the grid-area a name */
+#topic-card7 {
+    grid-area: ca7;
 }
-
-#clientIcon6 {
-    grid-area: ci6;
-    /* TODO: give the grid-area a name */
-}
-
-#clientIcon7 {
-    grid-area: ci7;
-    /* TODO: give the grid-area a name */
-}
-
-#clientIcon8 {
-    grid-area: ci8;
-    /* TODO: give the grid-area a name */
-}
-
-/* Use a flexible layout grid */
-.main-container {
-    display: grid;
-    column-gap: 1em;
-}
-  
 /* 
 Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
 for the smallest screen sizes. In this case we want a single column that spans the main container.
 Because this CSS definition comes first, it will apply by default. Then we override it below with 
 media queries for progressively bigger screen widths
 */
+
 .main-container {
     /* TODO: setup the grid-template for mobile phone layout */
     grid-template:
     "ban ban ban ban" minmax(6em, auto)
     ".    .   .  . "  minmax(2em, auto)
-    "tm1 tm1 tm1 tm1" minmax(30em, auto)
+    "ca1 ca1 ca1 ca1" minmax(30em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "tm2 tm2 tm2 tm2" minmax(30em, auto)
+    "ca2 ca2 ca2 ca2" minmax(30em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "tm3 tm3 tm3 tm3" minmax(30em, auto)
+    "ca3 ca3 ca3 ca3" minmax(30em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "oct oct oct oct" minmax(6em, auto)
+    "ca4 ca4 ca4 ca4" minmax(30em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "ci1 ci1 ci2 ci2" minmax(6em, auto)
-    "ci3 ci3 ci4 ci4" minmax(6em, auto)
-    "ci5 ci5 ci6 ci6" minmax(6em, auto)
-    "ci7 ci7 ci8 ci8" minmax(6em, auto)
-
+    "ca5 ca5 ca5 ca5" minmax(30em, auto)
+    ".    .   .   . " minmax(2em, auto)
+    "ca6 ca6 ca6 ca6" minmax(30em, auto)
+    ".    .   .   . " minmax(2em, auto)
+    "ca7 ca7 ca7 ca7" minmax(30em, auto)
+    ".    .   .   . " minmax(2em, auto)
+    "ca8 ca8 ca8 ca8" minmax(30em, auto)
 }
 
 @media (min-width: 50em) {
@@ -169,34 +136,36 @@ media queries for progressively bigger screen widths
     grid-template:
     "ban ban ban ban ban ban ban ban" minmax(8em, auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
-    "tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1" minmax(30em,auto)
+    ".    .   ca1 ca1 ca1 ca1 .   . " minmax(30em, auto)
+    "ca2 ca2 ca2 ca2 ca3 ca3 ca3 ca3" minmax(30em,auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
-    "tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2" minmax(30em,auto)
+    "ca4 ca4 ca4 ca4 ca5 ca5 ca5 ca5" minmax(30em,auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
-    "tm3 tm3 tm3 tm3 tm3 tm3 tm3 tm3" minmax(2em, auto)
+    "ca6 ca6 ca6 ca6 ca7 ca7 ca7 ca7" minmax(2em, auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
-    "oct oct oct oct oct oct oct oct" minmax(8em, auto)
-    ".    .   .   .   .   .   .   . " minmax(2em, auto)
-    "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(16em,auto)
-    "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(16em,auto)
-    "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(16em,auto)
-    "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(16em,auto)
+    ".    .  ca8 ca8 ca8 ca8  .   . " minmax(30em, auto)
+
+
        /* TODO: setup the grid-template for tablet layout */
     }
 }
+
 
 @media (min-width: 75em) {
     .main-container {
         grid-template:
         "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2 tm3 tm3 tm3 tm3" minmax(32em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-        "oct oct oct oct oct oct oct oct oct oct oct oct" minmax(2em, auto)
+        ".    .   .   .  ca1 ca1 ca1 ca1 .    .   .   ." minmax(32em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "ci1 ci1 ci1 ci2 ci2 ci2 ci3 ci3 ci3 ci4 ci4 ci4" minmax(8em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
-        "ci5 ci5 ci5 ci6 ci6 ci6 ci7 ci7 ci7 ci8 ci8 ci8" minmax(8em, auto)
+        "ca2 ca2 ca2 ca2 ca3 ca3 ca3 ca3 ca4 ca4 ca4 ca4" minmax(32em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "ca5 ca5 ca5 ca5 ca6 ca6 ca6 ca6 ca7 ca7 ca7 ca7" minmax(2em, auto)
+        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+        " .   .   .   .  ca8 ca8 ca8 ca8  .   .   .   . " minmax(32em, auto)
+    
         /* TODO: setup the grid-template for desktop layout */
     }
 }
+
+  
