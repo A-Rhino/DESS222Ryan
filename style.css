@@ -126,21 +126,21 @@ media queries for progressively bigger screen widths
     grid-template:
     "ban ban ban ban" minmax(6em, auto)
     ".    .   .   . "  minmax(2em, auto)
-    "ca1 ca1 ca1 ca1" minmax(30em, auto)
+    "ca1 ca1 ca1 ca1" minmax(20em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "ca2 ca2 ca2 ca2" minmax(30em, auto)
+    "ca2 ca2 ca2 ca2" minmax(20em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "ca3 ca3 ca3 ca3" minmax(30em, auto)
+    "ca3 ca3 ca3 ca3" minmax(20em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "ca4 ca4 ca4 ca4" minmax(30em, auto)
+    "ca4 ca4 ca4 ca4" minmax(20em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "ca5 ca5 ca5 ca5" minmax(30em, auto)
+    "ca5 ca5 ca5 ca5" minmax(20em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "ca6 ca6 ca6 ca6" minmax(30em, auto)
+    "ca6 ca6 ca6 ca6" minmax(20em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "ca7 ca7 ca7 ca7" minmax(30em, auto)
+    "ca7 ca7 ca7 ca7" minmax(20em, auto)
     ".    .   .   . " minmax(2em, auto)
-    "ca8 ca8 ca8 ca8" minmax(30em, auto)
+    "ca8 ca8 ca8 ca8" minmax(20em, auto)
 }
 
 @media (min-width: 50em) {
@@ -148,15 +148,15 @@ media queries for progressively bigger screen widths
     grid-template:
     "ban ban ban ban ban ban ban ban" minmax(8em, auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
-    ".    .   ca1 ca1 ca1 ca1 .   . " minmax(30em, auto)
+    ".    .   ca1 ca1 ca1 ca1 .   . " minmax(20em, auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
-    "ca2 ca2 ca2 ca2 ca3 ca3 ca3 ca3" minmax(30em,auto)
+    "ca2 ca2 ca2 ca2 ca3 ca3 ca3 ca3" minmax(20em,auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
-    "ca4 ca4 ca4 ca4 ca5 ca5 ca5 ca5" minmax(30em,auto)
+    "ca4 ca4 ca4 ca4 ca5 ca5 ca5 ca5" minmax(20em,auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
     "ca6 ca6 ca6 ca6 ca7 ca7 ca7 ca7" minmax(2em, auto)
     ".    .   .   .   .   .   .   . " minmax(2em, auto)
-    ".    .  ca8 ca8 ca8 ca8  .   . " minmax(30em, auto)
+    ".    .  ca8 ca8 ca8 ca8  .   . " minmax(20em, auto)
 
 
        /* TODO: setup the grid-template for tablet layout */
@@ -169,13 +169,13 @@ media queries for progressively bigger screen widths
         grid-template:
         "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        " .    .   .   .  ca1 ca1 ca1 ca1 .    .   .   ." minmax(32em, auto)
+        " .    .   .   .  ca1 ca1 ca1 ca1 .    .   .   ." minmax(22em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "ca2 ca2 ca2 ca2 ca3 ca3 ca3 ca3 ca4 ca4 ca4 ca4" minmax(32em, auto)
+        "ca2 ca2 ca2 ca2 ca3 ca3 ca3 ca3 ca4 ca4 ca4 ca4" minmax(22em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        "ca5 ca5 ca5 ca5 ca6 ca6 ca6 ca6 ca7 ca7 ca7 ca7" minmax(32em, auto)
+        "ca5 ca5 ca5 ca5 ca6 ca6 ca6 ca6 ca7 ca7 ca7 ca7" minmax(22em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        " .   .   .   .  ca8 ca8 ca8 ca8  .   .   .   . " minmax(32em, auto)
+        " .   .   .   .  ca8 ca8 ca8 ca8  .   .   .   . " minmax(22em, auto)
     
         /* TODO: setup the grid-template for desktop layout */
     }
